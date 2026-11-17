@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="eventbooking" method="upgrade">
+    <name>plg_eventbooking_kunenasubscribe</name>
+    <author>Agence AGERIX</author>
+    <creationDate>2026-11</creationDate>
+    <copyright>Copyright (C) 2026 Agence AGERIX</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorUrl>https://www.agerix.fr</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_EVENTBOOKING_KUNENASUBSCRIBE_XML_DESCRIPTION</description>
+    <namespace path="src">Agerix\Plugin\EventBooking\KunenaSubscribe</namespace>
+    <files>
+        <folder plugin="kunenasubscribe">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/plg_eventbooking_kunenasubscribe.ini</language>
+        <language tag="en-GB">en-GB/plg_eventbooking_kunenasubscribe.sys.ini</language>
+        <language tag="fr-FR">fr-FR/plg_eventbooking_kunenasubscribe.ini</language>
+        <language tag="fr-FR">fr-FR/plg_eventbooking_kunenasubscribe.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="subscribe_offline_pending"
+                    type="radio"
+                    label="PLG_EVENTBOOKING_KUNENASUBSCRIBE_OFFLINE_LABEL"
+                    description="PLG_EVENTBOOKING_KUNENASUBSCRIBE_OFFLINE_DESC"
+                    layout="joomla.form.field.radio.switcher"
+                    default="0"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                    name="unsubscribe_when_cancelled"
+                    type="radio"
+                    label="PLG_EVENTBOOKING_KUNENASUBSCRIBE_CANCEL_LABEL"
+                    description="PLG_EVENTBOOKING_KUNENASUBSCRIBE_CANCEL_DESC"
+                    layout="joomla.form.field.radio.switcher"
+                    default="1"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                    name="show_on_frontend"
+                    type="radio"
+                    label="PLG_EVENTBOOKING_KUNENASUBSCRIBE_FRONTEND_LABEL"
+                    description="PLG_EVENTBOOKING_KUNENASUBSCRIBE_FRONTEND_DESC"
+                    layout="joomla.form.field.radio.switcher"
+                    default="0"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
